@@ -124,11 +124,11 @@ const cvFormatter = (arr) => {
              }
          ]
 
-   info : function(newarr){
+   info : function(arr){
        let narr = [];
        for(let i=0; i<=arr.length; i++){
         if(arr[i].this.yearsOfExperience > 1){
-            narr =  []
+            narr =  [arr[i]];
 
           console.log(this.firstName+this.lastName+this.yearsOfExperience)
 
