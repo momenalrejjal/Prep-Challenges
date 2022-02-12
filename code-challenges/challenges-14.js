@@ -25,6 +25,9 @@
 
 const LastWord = (str) => {
     // write your code here
+    const last = str.split(' ');
+    let index = last.lastIndexOf(searchTerm);
+return last[index];
 }
 // -------------------------------------------------------------------------------------------------------
 

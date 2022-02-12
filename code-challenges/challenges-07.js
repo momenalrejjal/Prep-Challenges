@@ -97,46 +97,20 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-    let arr = [
-             {
-                 firstName: "Jason",
-                 LastName: "James",
-                 yearsOfExperience: 20,
-                 tech: "JS"
-             },
-             {
-                 firstName: "Shira",
-                 LastName: null,
-                   yearsOfExperience: 5,
-                   tech: ".Net"
-             },
-             {
-                 firstName: "Dmitri",
-                 LastName: "Akkerman",
-                 yearsOfExperience: 1,
-                 tech: "Python"
-             },
-             {
-                 firstName: "Isabella",
-                 LastName: null,
-                 yearsOfExperience: 7,
-                 tech: "Java"
-             }
-         ]
-
-   info : function(arr){
-       let narr = [];
-       for(let i=0; i<=arr.length; i++){
-        if(arr[i].this.yearsOfExperience > 1){
-            narr =  [arr[i]];
-
-          console.log(this.firstName+this.lastName+this.yearsOfExperience)
-
+    
+const info = arr.map(element =>{
+    if(element.yearsOfExperience > 1){
+        if(element.firstName !== null && element.lastName !== null){
+        return "fullName: "+" "+element.firstName+" "+element.lastName+" ";
+    }else{if(element.firstName === null && element.lastName !== null){
+        return  "fullName: "+element.lastName+element.tech;
     }else{
+       return "fullName: "+element.firstName+element.tech;
     }
-    }
+}}
+})
+return info;
 }
-};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
