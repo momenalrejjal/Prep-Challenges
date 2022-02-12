@@ -48,7 +48,12 @@ const roundDecimals = (arr) => {
     result.push(Math.round(element));
     });
     return result;
+
+
 }
+
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -117,6 +122,19 @@ const roundDecimals = (arr) => {
 
 const employeesBonus = (arr) => {
     // write your code here
+    const newData  = arr.map(element => {
+        let newSsalary = Number(element.salary.replace("$",""));
+        if(element.workHours > 8){    //increase their salary 100$
+            return {...element,salary:newSsalary+100+"$"}
+        } else{ 
+        return {...element,salary:newSsalary+50+"$"}
+
+        // +50
+        }
+
+    })
+return newData ;
+    
 }
 // -------------------------------------------------------------------------------------------------------
 
