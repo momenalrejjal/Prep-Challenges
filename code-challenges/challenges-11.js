@@ -61,7 +61,15 @@ return map1;
 
 function fullName(arr) {
     // write your code here
-}
+     
+        // write your code here
+        const students = arr.map(element =>{
+            const  fullName = element.firstName +" "+ element.lastName
+    return fullName;
+        })
+        return students;
+    }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -127,7 +135,20 @@ function fullName(arr) {
 
 function gradesAvg(arr) {
     // write your code here
-}
+        const avggradess = arr.map(element =>{
+            let avg =0;
+            let sum =0;
+        for(let i =0; i <=7; i++){
+        sum += element.gradsList[i]
+        }
+        avg = sum/8;
+        console.log(sum);
+    return {...element,avg}
+        })
+        console.log(avggradess)
+        return avggradess;
+    }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -201,7 +222,18 @@ function gradesAvg(arr) {
 
 function studentsResult(arr) {
     // write your code here
+const status = arr.map(element =>{
+    if(element.avg > 50){
+            let result = "Passed";
+        return {...element,result}
+    }else{
+        let result ="Failed"
+        return {...element,result}
+    }
+})
+return status;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { square, fullName, gradesAvg, studentsResult };

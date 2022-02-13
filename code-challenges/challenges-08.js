@@ -33,7 +33,7 @@ const customerAndAge = (obj) => {
 
 for (const property in customerAndAge) {
 
-  console.log(`${property}: ${customerAndAge[property]}`);
+  return `${property}: ${customerAndAge[property]}`
 }
 
 };
@@ -62,6 +62,7 @@ for (const property in customerAndAge) {
 
 const getEntries = (obj) => {
   // write your code here
+  return Object.entries(obj);
 };
 // -------------------------------------------------------------------------------------------------------
 
