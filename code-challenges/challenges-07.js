@@ -22,17 +22,7 @@
 
 const objLat = (obj) => {
     // write your code here
-    let obj = {
-              firstName: 'Ellie',
-              lastName: 'Jon',
-              age: 67,
-             hobby: 'Gaming and Sleeping',
-         
-          
-         info : function(){
-        console.log("my name is "+this.firstName+" "+this.lastName+" I am "+this.age+" YO, and I love "+this.hobby)
-         }       
-}
+   return "my name is "+obj.firstName+" "+obj.lastName+" I am "+obj.age+" YO, and I love "+obj.hobby+"."     
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -101,7 +91,7 @@ const cvFormatter = (arr) => {
 const info = arr.map(element =>{
     if(element.yearsOfExperience > 1){
         if(element.firstName !== null && element.lastName !== null){
-        return "fullName: "+" "+element.firstName+" "+element.lastName+" ";
+        return "fullName: "+" "+element.firstName+" "+element.lastName+" "+element.tech;
     }else{if(element.firstName === null && element.lastName !== null){
         return  "fullName: "+element.lastName+element.tech;
     }else{
