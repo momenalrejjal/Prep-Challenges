@@ -61,13 +61,15 @@ return map1;
 
 function fullName(arr) {
     // write your code here
-    const students = arr.map(element =>{
-     const fullName = element.firstName +" "+ element.lastName
-return fullName;
-    })
-    return students;
-}
-   
+     
+        // write your code here
+        const students = arr.map(element =>{
+            const  fullName = element.firstName +" "+ element.lastName
+    return fullName;
+        })
+        return students;
+    }
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -133,18 +135,20 @@ return fullName;
 
 function gradesAvg(arr) {
     // write your code here
-    let sum ;
-    let avg ;
-    const avggradess = arr.map(element =>{
-
-    for(let i =0; i <=7; i++){
-    sum += element.gradsList[i]
+        const avggradess = arr.map(element =>{
+            let avg =0;
+            let sum =0;
+        for(let i =0; i <=7; i++){
+        sum += element.gradsList[i]
+        }
+        avg = sum/8;
+        console.log(sum);
+    return {...element,avg}
+        })
+        console.log(avggradess)
+        return avggradess;
     }
-    avg = sum/8;
-return {...element,avg}
-    })
-    return avggradess;
-}
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -218,7 +222,18 @@ return {...element,avg}
 
 function studentsResult(arr) {
     // write your code here
+const status = arr.map(element =>{
+    if(element.avg > 50){
+            let result = "Passed";
+        return {...element,result}
+    }else{
+        let result ="Failed"
+        return {...element,result}
+    }
+})
+return status;
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { square, fullName, gradesAvg, studentsResult };
