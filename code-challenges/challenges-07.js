@@ -22,18 +22,11 @@
 
 const objLat = (obj) => {
     // write your code here
-    let obj = {
-              firstName: 'Ellie',
-              lastName: 'Jon',
-              age: 67,
-             hobby: 'Gaming and Sleeping',
-         
-          
-         info : function(){
-        console.log("my name is "+this.firstName+" "+this.lastName+" I am "+this.age+" YO, and I love "+this.hobby)
-         }       
-}
-}
+const res = obj.map(element => {
+      
+})
+    
+};
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
@@ -97,45 +90,6 @@ const objLat = (obj) => {
 
 const cvFormatter = (arr) => {
     // write your code here
-    let arr = [
-             {
-                 firstName: "Jason",
-                 LastName: "James",
-                 yearsOfExperience: 20,
-                 tech: "JS"
-             },
-             {
-                 firstName: "Shira",
-                 LastName: null,
-                   yearsOfExperience: 5,
-                   tech: ".Net"
-             },
-             {
-                 firstName: "Dmitri",
-                 LastName: "Akkerman",
-                 yearsOfExperience: 1,
-                 tech: "Python"
-             },
-             {
-                 firstName: "Isabella",
-                 LastName: null,
-                 yearsOfExperience: 7,
-                 tech: "Java"
-             }
-         ]
-
-   info : function(newarr){
-       let narr = [];
-       for(let i=0; i<=arr.length; i++){
-        if(arr[i].this.yearsOfExperience > 1){
-            narr =  []
-
-          console.log(this.firstName+this.lastName+this.yearsOfExperience)
-
-    }else{
-    }
-    }
-}
 };
 // -------------------------------------------------------------------------------------------------------
 
