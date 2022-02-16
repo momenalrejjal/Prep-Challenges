@@ -27,7 +27,7 @@ while(int1 >0){
         arr.push(int1)
         int1+=int2
     }
-console.log(arr)
+
 return arr;
 
 
@@ -51,10 +51,22 @@ return arr;
 const filterLinks = (str) => {
     // write your code here
  
-   let nstr = str.replace(/<a hrefw>/, '').replace(/<\/a>/,'').replace(/<h1>/, "").replace(/<\/h1>/,"").replace(/<b>/, "").replace(/<\/b>/,'').replace("http://", '').replace("<", '').replace("a href=",'').replace()//a href=\"www.hackerrank.com\">HackerRank
-
-
-return nstr;
+    str=str.replace(/<br>/gi, "\n");
+    str=str.replace(/<p.*>/gi, "\n");
+    str=str.replace(/<a.*href="(.*?)".*>(.*?)<\/a>/gi, " $2(Link->$1) ");
+    str=str.replace(/<(?:.|\s)*?>/g, "");
+    str=str.replace('Link->http:','')
+    str=str.replace(" ","")
+    str=str.replace("(","")
+    str=str.replace(")","")
+    str=str.replace("/","")
+    
+    str=str.replace("/","")
+    str=str.replace(" ","")
+ 
+    
+   
+    return str
 }
 // -------------------------------------------------------------------------------------------------------
 
@@ -74,7 +86,34 @@ return nstr;
 
 const isPalindrome = (str) => {
     // write your code here
-}
+        
+        let p=[];
+        
+        let b;
+       let s= [];
+       if(str !== " "){
+       s=str.replace(',','').replace(':','').replace(' ','').replace(',','').replace(' ','').replace(' ','').replace(' ','').replace(' ','').replace(' ','')
+       }else{s=str}
+       
+        let n=s.length;
+        n=n-1
+        for(let i=0, j=n;i<=j;i++, j--)
+        {
+            if(s[i] === s[j])
+            {
+                p.push(s[i]);
+                b = true
+            }
+            else 
+            {
+               
+               b = false
+            }
+        }
+        return b
+    }
+
+
 // -------------------------------------------------------------------------------------------------------
 
 // -------------------------------------------------------------------------------------------------------
